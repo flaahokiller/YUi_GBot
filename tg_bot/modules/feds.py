@@ -24,18 +24,11 @@ from tg_bot.modules.disable import DisableAbleCommandHandler
 
 import tg_bot.modules.sql.feds_sql as sql
 from tg_bot.modules.helper_funcs.alternate import send_message
-# Hello bot owner, I spent for feds many hours of my life. Please don't remove this if you still respect MrYacha and peaktogoo and AyraHikari too.
-# Federation by MrYacha 2018-2019
-# Federation rework by Mizukito Akito 2019
-# Federation update v2 by Ayra Hikari 2019
+# Time spent on updating version to v2.1 = 2+ hours by Net_SHELL
 #
-# Time spent on feds = 10h by #MrYacha
-# Time spent on reworking on the whole feds = 22+ hours by @RealAkito
-# Time spent on updating version to v2 = 26+ hours by @AyraHikari
-#
-# Total spended for making this features is 68+ hours
+# Total spended for making this features is 70+ hours
 
-LOGGER.info("@NOOB_GUY_OP")
+LOGGER.info("@Net_SHELL")
 
 
 FBAN_ERRORS = {
