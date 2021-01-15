@@ -171,8 +171,8 @@ SLAP_TEMPLATES = (
 )
 
 PING_STRING = (
-    "PONG!!",
-    "I am here!",
+    "Yoo ?",
+    "i Am Online Bro 😉",
 )
 
 ITEMS = (
