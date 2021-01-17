@@ -140,7 +140,8 @@ def info(bot: Bot, update: Update, args: List[str]):
             caption=(text),
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
-        
+        )
+            
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
             result = requests.post(f"https://api.telegram.org/bot{TOKEN}/getChatMember?chat_id={chat.id}&user_id={user.id}")
