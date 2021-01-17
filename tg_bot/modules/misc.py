@@ -115,20 +115,20 @@ def info(bot: Bot, update: Update, args: List[str]):
     
     
    
-    text = (f"<b>----------------Us̉̈́e̾ͨr̈ͭ De̾ͨt̉̈́a͌͛iͭ̒lͬ̍s̉̈́--------------</b>\n"
+    text = (f"<b>----Us̉̈́e̾ͨr̈ͭ De̾ͨt̉̈́a͌͛iͭ̒lͬ̍s̉̈́----</b>\n"
             f"丅Ꭵᗪ » <code>{user.id}</code>\n"
             f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"nLNᴀᴍᴇ › {html.escape(user.last_name)}"
+        text += f"LNᴀᴍᴇ › {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
+        text += f"ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
 
-    text += f"\ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}"
+    text += f"ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}"
 
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\n💬 ᑕᕼᗩT ᑕOᑌᑎT » <code>{num_chats}</code>"
+    text += f"💬 ᑕᕼᗩT ᑕOᑌᑎT » <code>{num_chats}</code>"
     
     try:
         user_member = chat.get_member(user.id)
