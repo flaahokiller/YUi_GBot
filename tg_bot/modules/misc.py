@@ -113,7 +113,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     else:
         return
 
-    text = (f"{html.escape<h1 style="color:blue;">user information:</h1>}\n"
+    text = (f"{html.escape <b> style="color:blue;">user information:</b>}\n"
             f"🆔️ID: <code>{user.id}</code>\n"
             f"👤First Name: {html.escape(user.first_name)}")
 
