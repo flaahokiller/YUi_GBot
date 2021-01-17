@@ -118,10 +118,7 @@ def info(bot: Bot, update: Update, args: List[str]):
     text = (f"<b>U🆂🅴🆁 D🅴🆃🅰️🅸🅻🆂 ⤵️/b>\n"
             f"丅Ꭵᗪ » <code>{user.id}</code>\n"
             f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}"
-
-    if user.last_name:
-        text += f"\n👤Last Name: {html.escape(user.last_name)}"
-
+            
     if user.username:
         text += f"\n ᑌSEᖇᑎᗩᗰE › @{html.escape(user.username)}"
 
