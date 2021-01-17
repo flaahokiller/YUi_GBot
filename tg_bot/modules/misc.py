@@ -129,13 +129,10 @@ def info(bot: Bot, update: Update, args: List[str]):
 
     num_chats = sql.get_user_num_chats(user.id)
     text += f"\n🌍Chat count: <code>{num_chats}</code>"
-
-    
-    
-    
     
     try:
-            profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
+        
+        profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
             context.bot.sendChatAction(chat.id, "upload_photo")
             context.bot.send_photo(
             chat.id,
@@ -143,14 +140,7 @@ def info(bot: Bot, update: Update, args: List[str]):
             caption=(text),
             parse_mode=ParseMode.HTML,
             disable_web_page_preview=True,
-        )
-    
-    
-    
-    
-    
-    
-    try:
+        
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
             result = requests.post(f"https://api.telegram.org/bot{TOKEN}/getChatMember?chat_id={chat.id}&user_id={user.id}")
