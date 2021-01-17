@@ -115,7 +115,7 @@ def info(bot: Bot, update: Update, args: List[str]):
 
     text = (f"<b>user information:</b>\n"
             f"🆔️ID: <code>{user.id}</code>\n"
-            f"👤First Name: {html.escape(user.first_name)}"
+            f"👤First Name: {html.escape(user.first_name)}")
 
     if user.last_name:
         text += f"\n👤Last Name: {html.escape(user.last_name)}"
