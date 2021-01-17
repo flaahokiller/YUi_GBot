@@ -115,19 +115,21 @@ def info(bot: Bot, update: Update, args: List[str]):
     
     
    
-    text = (f"<b>US͜͡E͜͡R͜͡ DE͜͡T͜͡A͜͡I͜͡L͜͡S͜͡__/⤵️\__</b>\n"
+    text = (f"<b>U🆂🅴🆁 D🅴🆃🅰️🅸🅻🆂 ⤵️/b>\n"
             f"丅Ꭵᗪ » <code>{user.id}</code>\n"
-            f"\n😶Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")/n"
-    
-    
-    if user.username:
-        text += f"\n😶ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
+            f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}"
 
-    text += f"\n🌉ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}"
+    if user.last_name:
+        text += f"\n👤Last Name: {html.escape(user.last_name)}"
+
+    if user.username:
+        text += f"\n ᑌSEᖇᑎᗩᗰE › @{html.escape(user.username)}"
+
+    text += f"\n ᑭᖇOᖴiᒪE ᒪiᑎK ›  {mention_html(user.id, 'link')}"
 
     num_chats = sql.get_user_num_chats(user.id)
     text += f"\n💬 ᑕᕼᗩT ᑕOᑌᑎT » <code>{num_chats}</code>"
-    
+
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
