@@ -120,9 +120,9 @@ def info(bot: Bot, update: Update, args: List[str]):
             f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")
 
     if user.username:
-        text += f"ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}")
+        text += f"ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
 
-    text += f"ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}")
+    text += f"ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}"
 
     num_chats = sql.get_user_num_chats(user.id)
     text += f"💬 ᑕᕼᗩT ᑕOᑌᑎT » <code>{num_chats}</code>"
