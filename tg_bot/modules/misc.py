@@ -115,12 +115,9 @@ def info(bot: Bot, update: Update, args: List[str]):
     
     
    
-    text = (f"<b>----Us̉̈́e̾ͨr̈ͭ De̾ͨt̉̈́a͌͛iͭ̒lͬ̍s̉̈́----</b>\n"
+    text = (f"<b>✔️US͜͡E͜͡R͜͡ DE͜͡T͜͡A͜͡I͜͡L͜͡S͜͡__/⤵️\__</b>\n"
             f"丅Ꭵᗪ » <code>{user.id}</code>\n"
-            f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")
-
-    if user.last_name:
-        text += f"LNᴀᴍᴇ › {html.escape(user.last_name)}"
+            f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}"
 
     if user.username:
         text += f"ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
