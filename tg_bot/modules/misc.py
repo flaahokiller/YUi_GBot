@@ -115,33 +115,22 @@ def info(bot: Bot, update: Update, args: List[str]):
     
     
    
-    text = (f"<b>user information:</b>\n"
-            f"🆔️ID: <code>{user.id}</code>\n"
-            f"👤First Name: {html.escape(user.first_name)}")
+    text = (f"<b>----------------Us̉̈́e̾ͨr̈ͭ De̾ͨt̉̈́a͌͛iͭ̒lͬ̍s̉̈́--------------</b>\n"
+            f"丅Ꭵᗪ » <code>{user.id}</code>\n"
+            f"Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")
 
     if user.last_name:
-        text += f"\n👤Last Name: {html.escape(user.last_name)}"
+        text += f"nLNᴀᴍᴇ › {html.escape(user.last_name)}"
 
     if user.username:
-        text += f"\n👤Username: @{html.escape(user.username)}"
+        text += f"\ᴜֆɛʀռǟʍɛ » @{html.escape(user.username)}"
 
-    text += f"\n👤Permanent user link: {mention_html(user.id, 'link')}"
+    text += f"\ᑭᖇOᖴiᒪE ᒪiᑎK › {mention_html(user.id, 'Show')}"
 
     num_chats = sql.get_user_num_chats(user.id)
-    text += f"\n🌍Chat count: <code>{num_chats}</code>"
+    text += f"\n💬 ᑕᕼᗩT ᑕOᑌᑎT » <code>{num_chats}</code>"
     
     try:
-        
-        profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
-            context.bot.sendChatAction(chat.id, "upload_photo")
-            context.bot.send_photo(
-            chat.id,
-            photo=profile,
-            caption=(text),
-            parse_mode=ParseMode.HTML,
-            disable_web_page_preview=True,
-        )
-            
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
             result = requests.post(f"https://api.telegram.org/bot{TOKEN}/getChatMember?chat_id={chat.id}&user_id={user.id}")
