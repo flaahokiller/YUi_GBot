@@ -112,8 +112,10 @@ def info(bot: Bot, update: Update, args: List[str]):
 
     else:
         return
-
-    text = (f"<center><b>user information:</b></center>\n"
+    
+    
+   
+    text = (f"<b>user information:</b>\n"
             f"🆔️ID: <code>{user.id}</code>\n"
             f"👤First Name: {html.escape(user.first_name)}")
 
@@ -128,6 +130,26 @@ def info(bot: Bot, update: Update, args: List[str]):
     num_chats = sql.get_user_num_chats(user.id)
     text += f"\n🌍Chat count: <code>{num_chats}</code>"
 
+    
+    
+    
+    
+    try:
+            profile = context.bot.get_user_profile_photos(user.id).photos[0][-1]
+            context.bot.sendChatAction(chat.id, "upload_photo")
+            context.bot.send_photo(
+            chat.id,
+            photo=profile,
+            caption=(text),
+            parse_mode=ParseMode.HTML,
+            disable_web_page_preview=True,
+        )
+    
+    
+    
+    
+    
+    
     try:
         user_member = chat.get_member(user.id)
         if user_member.status == 'administrator':
