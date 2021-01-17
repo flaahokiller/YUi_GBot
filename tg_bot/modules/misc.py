@@ -117,8 +117,7 @@ def info(bot: Bot, update: Update, args: List[str]):
    
     text = (f"<b>US͜͡E͜͡R͜͡ DE͜͡T͜͡A͜͡I͜͡L͜͡S͜͡__/⤵️\__</b>\n"
             f"丅Ꭵᗪ » <code>{user.id}</code>\n"
-            f"\n😶Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")/n
-/n/n
+            f"\n😶Fiʀꜱᴛ Nᴀᴍᴇ › {html.escape(user.first_name)}")/n"
     
     
     if user.username:
