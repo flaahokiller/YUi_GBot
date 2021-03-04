@@ -1,7 +1,7 @@
 # YUi OFFICIAL
 
 
-Credits - [DEVLOPER](https://telegram.me/Net_SHELL)
+Credits - [DEVLOPER](https://telegram.me/wizard_boss)
 
 
 ![Yui](https://telegra.ph/file/fd91caf6f744344adec13.jpg)
@@ -17,7 +17,7 @@ Credits - [DEVLOPER](https://telegram.me/Net_SHELL)
 
 A Modular Telegram Python bot running on python3 with a sqlalchemy database 
 
-Can be found on telegram as [Yui_GBot](https://t.me/Yui_GBot).
+Can be found on telegram as [flashokiller](https://t.me/flashokiller_itachi_bot).
 
 The Support group can be reached out to at [Net_SHELL](https://t.me/Net_SHELL), where you can ask for help about [Yui](https://t.me/Yui_GBot), discover/request new features, report bugs, and stay in the loop whenever a new update is available. 
 
